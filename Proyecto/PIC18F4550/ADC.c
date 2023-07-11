@@ -5,7 +5,7 @@ FECHA: JUNIO 2019
 
 /*
 ---------------------------------------------------------------------------
-Implementar una lectura anal骻ica de un potenci髆etro y desplegar el valor
+Implementar una lectura anal贸gica de un potenci贸metro y desplegar el valor
 en 8 LEDs
 ---------------------------------------------------------------------------
 */
@@ -13,10 +13,10 @@ en 8 LEDs
 #include <18F4550.h>                            //Incluye el microcontrolador con el que se va a trabajar 
 #DEVICE ADC=8                                   //Configura el ADC a 8 bits
 #use delay(clock=48Mhz, crystal)                //Tipo de oscilador y frecuencia dependiendo del microcontrolador 
-#build(reset=0x02000,interrupt=0x02008)         //Asigna los vectores de reset e interrupci髇 para la versi髇 con bootloader
+#build(reset=0x02000,interrupt=0x02008)         //Asigna los vectores de reset e interrupci贸n para la versi贸n con bootloader
 #org 0x0000,0x1FFF {}                           //Reserva espacio en memoria para el bootloader
  
-int ValorPot;                                   //Variable para almacenar el valor le韉o del ADC
+int ValorPot;                                   //Variable para almacenar el valor le铆do del ADC
 
 void SisInit(void)
 
@@ -26,9 +26,9 @@ setup_oscillator(OSC_8MHZ);                     //Configura oscilador interno
 
 set_tris_b (0X00);                              //Configura todo el puerto B como salidas digitales
 
-setup_adc_ports (AN0);                          //Configura solo el puerto A0 como entrada anal骻ica
+setup_adc_ports (AN0);                          //Configura solo el puerto A0 como entrada anal贸gica
 
-setup_adc (ADC_CLOCK_DIV_8);                    //Configura oscilador para la conversi髇
+setup_adc (ADC_CLOCK_DIV_8);                    //Configura oscilador para la conversi贸n
 
 }
 
@@ -43,7 +43,7 @@ void main()
 
                     {
 
-                          set_adc_channel (0);                       //Selecciona el canal 0 para la conversi髇
+                          set_adc_channel (0);                       //Selecciona el canal 0 para la conversi贸n
 
                          ValorPot = read_adc ();                     //Lee el valor del ADC y lo guarda en la variable
 
