@@ -1,8 +1,10 @@
-/*
-AUTOR: MICROSIDE TECHNOLOGY S.A. DE C.V.
-FECHA: JUNIO 2019
-*/
-
+/************************************************************************************************
+Company:
+Microside Technology Inc.
+Product Revision  :  1
+Device            :  X-TRAINER
+Driver Version    :  1.0
+************************************************************************************************/
 /*
 ---------------------------------------------------------------------------
 Implementar una lectura analógica de un potenciómetro y desplegar el valor
@@ -17,21 +19,13 @@ en 8 LEDs
 #org 0x0000,0x1FFF {}                          //Reserva espacio en memoria para el bootloader
 
 int ValorPot;                                  //Variable para almacenar el valor leído del ADC
-
-void SisInit(void)
-
-{
-set_tris_b (0X00);                             //Configura todo el puerto B como salidas digitales
-setup_adc_ports (sAN0);                        //Configura solo el puerto A0 como entrada analógica
-setup_adc (ADC_CLOCK_INTERNAL);                //Configura oscilador interno para la conversión
-}
-
  
 void main()
-
 {
-              SisInit () ;
-
+              set_tris_b (0X00);                             //Configura todo el puerto B como salidas digitales
+              setup_adc_ports (sAN0);                        //Configura solo el puerto A0 como entrada analógica
+              setup_adc (ADC_CLOCK_INTERNAL);                //Configura oscilador interno para la conversión
+              
               while (1)
 
                     {
@@ -87,9 +81,9 @@ void main()
 
                              else if (ValorPot <= 255)               //Compara el valor de el ADC con 255
 
-                                   {
-                                        output_b (0b11111111);      // Leds activos
-                                    }
+                                 {
+                                       output_b (0b11111111);      // Leds activos
+                                 }
 
                }
 
