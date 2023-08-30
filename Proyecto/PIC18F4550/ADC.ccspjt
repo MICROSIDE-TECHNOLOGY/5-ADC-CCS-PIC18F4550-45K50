@@ -1,7 +1,7 @@
 [PROJECT]
 Target=ADC.hex
 Processor_Text=PIC18F4550
-CCSVersion=5.090
+CCSVersion=5.115d
 Compiler=PCH
 [Target Data]
 FileList=ADC.c
@@ -9,12 +9,9 @@ FileList=ADC.c
 Type=4
 [mru-list]
 1=ADC.c
-[Units]
-Count=1
-1=ADC (main)
 
 [defines]
-buildcount=1
+buildcount=2
 
 [Opened Files]
 1=ADC.c
@@ -22,7 +19,17 @@ t1=1
 Count=1
 
 [ProjectLog]
-Days=1
+Days=2
 D1=01-12-2020
 D1_L=1
 D1_L1=[35973]Project Closed.
+D2=30-08-2023
+D2_L=2
+D2_L1=[49861]Project Opened.
+D2_L2=[49996]Project Closed.
+
+[fileformats]
+forcecoff=0
+[Units]
+Count=1
+1=ADC (main)

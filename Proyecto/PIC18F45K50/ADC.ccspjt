@@ -22,7 +22,13 @@ t1=1
 Count=1
 
 [ProjectLog]
-Days=1
+Days=2
 D1=01-12-2020
 D1_L=1
 D1_L1=[36119]Project Closed.
+D2=30-08-2023
+D2_L=1
+D2_L1=[50005]Project Opened.
+
+[fileformats]
+forcecoff=0
